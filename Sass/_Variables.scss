@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'Kalameh-Thin';
+    src: url(../Fonts/Kalameh-Thin.ttf);
+}
+
+@font-face {
+    font-family: 'Kalameh-Regular';
+    src: url(../Fonts/Kalameh-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Kalameh-Bold';
+    src: url(../Fonts/Kalameh-Bold.ttf);
+}
+
+$bg-color-body: #d5ecff;
+$bg-color-cart: #ffffff;
+$bg-search:     #f8f8f8;
+$bg-pale-blue:  #edf2fd;
+$price-color:   #ee6e7a;
+$title-color:   #2e2e2e;
+$content-color: #b5b5b5;
+$pading-cart: 1.25rem;
+$border-rounded: 1.5625rem; 
+$font-bold:    'Kalameh-Bold';
+$font-regular: 'Kalameh-Regular';
+$font-thin:    'Kalameh-Thin';
+$color-icon: #2e2e2e;
+$pale-red-color:   #ee6e7a;
+$box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+$bg-clear: #feebeb;
+$bg-customer: #4c78ea;
+$bg-yellow: #F1C40F;
+$bg-green: #2ECC71;

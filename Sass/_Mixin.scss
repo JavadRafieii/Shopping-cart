@@ -1,0 +1,15 @@
+@mixin font-style ($font-family, $font-size, $font-color) {
+    font-family: $font-family;
+    font-size: $font-size;
+    color: $font-color;
+}
+
+@mixin style-box ($bg-color, $rounded, $pading) {
+    background-color: $bg-color;
+    border-radius: $rounded;
+    padding: $pading;
+    -webkit-border-radius: $rounded;
+    -moz-border-radius: $rounded;
+    -ms-border-radius: $rounded;
+    -o-border-radius: $rounded;
+}

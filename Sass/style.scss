@@ -1,0 +1,392 @@
+@import '_Variables.scss';
+@import '_Mixin.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none !important;
+    padding: 0 !important;
+}
+
+li::marker {
+    display: none !important;
+}
+
+span {
+    display: block;
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $bg-search;
+}
+
+
+body {
+    background-color: $bg-color-body;
+
+    main {
+        height: 100%;
+    }
+}
+
+.parent-cart {
+    background-color: $bg-color-cart;
+    width: 95%;
+    padding: $pading-cart;
+    border-radius: $border-rounded;
+    -webkit-border-radius: $border-rounded;
+    -moz-border-radius: $border-rounded;
+    -ms-border-radius: $border-rounded;
+    -o-border-radius: $border-rounded;
+    box-shadow: $box-shadow;
+    margin: 50px 0;
+}
+
+.parent-title-notification {
+
+    h1 {
+        @include font-style ($font-bold, 1.5rem, $title-color);
+    }
+
+    span {
+        @include font-style ($font-regular, .8rem, $content-color);
+    }
+
+    .box-bell {
+        width: 30px;
+        height: 30px;
+        @include style-box ($bg-pale-blue, 8px, 5px);
+        text-align: center;
+        float: right;
+    }
+}
+
+.parent-search {
+
+    #gsearch {
+        @include style-box ($bg-search, $border-rounded, 10px);
+        @include font-style ($font-regular, .9rem, $title-color);
+        width: 100%;
+        border: none;
+        outline: none;
+    }
+}
+
+.btn-filter {
+    @include font-style($font-regular, .9rem, $title-color);
+    @include style-box($bg-color-cart, $border-rounded, 5px 20px);
+    box-shadow: $box-shadow;
+    cursor: pointer;
+    width: 49%;
+
+    &:hover {
+        background-color: $pale-red-color;
+        color: #fff;
+    }
+
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.produts-box {
+    @include style-box($bg-color-cart, $border-rounded, 10px);
+    box-shadow: $box-shadow;
+    display: flex;
+    cursor: pointer;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+
+    &:hover {
+        transform: translateY(-10px);
+        -webkit-transform: translateY(-10px);
+        -moz-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+        -o-transform: translateY(-10px);
+    }
+
+    figure {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 100px
+        }
+    }
+
+    .img-box-red {
+        @include style-box($pale-red-color, $border-rounded, 5px);
+        height: 70px;
+        width: 75px;
+        margin: 0;
+        box-shadow: $box-shadow;
+    }
+
+    .img-box-yellow {
+        @include style-box($bg-yellow, $border-rounded, 5px);
+        @extend .img-box-red;
+    }
+
+    .img-box-blue {
+        @include style-box($bg-customer, $border-rounded, 5px);
+        @extend .img-box-red;
+    }
+
+    .img-box-green {
+        @include style-box($bg-green, $border-rounded, 5px);
+        @extend .img-box-red;
+    }
+
+
+    .title-product {
+        @include font-style($font-bold, 1rem, $title-color);
+    }
+
+    .product-code {
+        @include font-style($font-regular, .9rem, $content-color);
+    }
+
+    .product-price {
+        @include font-style($font-regular, .9rem, $price-color);
+    }
+
+}
+
+.parent-basket {
+    border-left: 2px solid #f8f8f8;
+
+    .title-product {
+        @include font-style($font-bold, 1rem, $title-color);
+    }
+
+    .product-code {
+        @include font-style($font-regular, .9rem, $content-color);
+    }
+
+    .product-price {
+        @include font-style($font-regular, .9rem, $price-color);
+    }
+
+    .discount-code {
+        @include font-style($font-bold, 1rem, $title-color);
+    }
+
+    #search-discount-code{
+        @include style-box ($bg-search, $border-rounded, 10px);
+        @include font-style ($font-regular, .9rem, $title-color);
+        width: 100%;
+        border: none;
+        outline: none;
+    }
+
+    .parent-title {
+
+        h1 {
+            @include font-style ($font-bold, 1.5rem, $title-color);
+        }
+
+        div {
+            @include font-style ($font-bold, .8rem, $pale-red-color);
+            @include style-box($bg-clear, $border-rounded, 0px 25px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            &:hover {
+                transform: translateY(-5px);
+                -webkit-transform: translateY(-5px);
+                -moz-transform: translateY(-5px);
+                -ms-transform: translateY(-5px);
+                -o-transform: translateY(-5px);
+            }
+
+            transition: .5s;
+            -webkit-transition: .5s;
+            -moz-transition: .5s;
+            -ms-transition: .5s;
+            -o-transition: .5s;
+        }
+    }
+
+    .parent-list-basket {
+        height: 150px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        padding: 0 5px !important;
+
+        li {
+            margin-bottom: 25px;
+        }
+    }
+
+    .parent-customer {
+        @include style-box($bg-color-cart, $border-rounded, 20px);
+        box-shadow: $box-shadow;
+    }
+
+    .total {
+        @include font-style ($font-bold, 1rem, $title-color);
+    }
+
+    .number-total {
+        @extend .total;
+        text-align: right;
+    }
+
+    .btn-customer {
+        @include style-box($bg-customer, $border-rounded, 10px 25px);
+        @include font-style ($font-bold, 1rem, #ffffff);
+        cursor: pointer;
+        text-align: center;
+
+        &:hover {
+            background-color: #2ECC71;
+        }
+
+        transition: .5s;
+        -webkit-transition: .5s;
+        -moz-transition: .5s;
+        -ms-transition: .5s;
+        -o-transition: .5s;
+    }
+}
+
+.box-list-basket {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .img-box-list-basket {
+        width: 30%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .content-box-list-basket {
+        width: 49%;
+    }
+
+    .number-box-list-basket {
+        width: fit-content;
+        text-align: center;
+
+        .number-pro {
+            @include font-style ($font-bold, 1rem, $title-color);
+        }
+
+        .bi-plus-square::before {
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        .bi-dash-square::before {
+            font-size: 17px;
+            cursor: pointer;
+        }
+    }
+}
+
+#swal2-title {
+    @include font-style ($font-regular, .9rem, $title-color);
+}
+
+#swal2-html-container {
+    @include font-style ($font-bold, .9rem, $title-color);
+}
+
+.swal2-styled.swal2-confirm {
+    background-color: #4c78ea !important;
+}
+
+
+
+
+
+.animation-btn-filter {
+    background-color: $pale-red-color;
+    color: #ffffff;
+}
+
+.animation-products-box {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+
+
+
+@media (min-width: 576px) {
+    .btn-filter {
+        width: auto;
+    }
+
+    .produts-box {
+        &:hover {
+            transform: translateX(0) scale(1.1);
+            -webkit-transform: translateX(0) scale(1.1);
+            -moz-transform: translateX(0) scale(1.1);
+            -ms-transform: translateX(0) scale(1.1);
+            -o-transform: translateX(0) scale(1.1);
+        }
+    }
+
+    .parent-list-basket {
+        height: 250px !important;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .btn-filter {
+        margin-right: 1rem;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .parent-cart {
+        width: 98%;
+    }
+
+    .parent-list-basket {
+        height: 300px !important;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .parent-cart {
+        width: 75%;
+    }
+}
+
+
+@media (min-width: 1400px) {
+    .parent-cart {
+        width: 65%;
+    }
+}
